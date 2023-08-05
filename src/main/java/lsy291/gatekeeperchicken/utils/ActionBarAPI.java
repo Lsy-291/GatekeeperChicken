@@ -10,11 +10,13 @@ import static lsy291.gatekeeperchicken.GatekeeperChicken.pluginPrefix;
 
 public class ActionBarAPI {
     public static void sendActionBar(Player player, String message) {
+        if (player == null) return;
         if (!player.isOnline()) { return; }
         player.spigot().sendMessage( ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(pluginPrefix + message));
     }
 
     public static void sendActionBar(Player player, String message, int duration) {
+        if (player == null) return;
         sendActionBar(player, message);
 
         if (duration > 0) {

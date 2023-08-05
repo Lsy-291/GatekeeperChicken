@@ -15,7 +15,7 @@ public class MainConfig extends ConfigManager {
         yml.addDefault(MainConfigPath.LOGIN_FAILED_SOUND, "ENTITY_VILLAGER_NO");
         yml.addDefault(MainConfigPath.LOGIN_SOUND_VOLUME, 0.4);
         yml.addDefault(MainConfigPath.LOGIN_TIMEOUT, 60);
-        yml.addDefault(MainConfigPath.AUTO_LOGIN_TIME, 600);
+        yml.addDefault(MainConfigPath.AUTO_LOGIN_TIME, 6000);
         yml.addDefault(MainConfigPath.PASSWORD_MIN_LENGTH, 5);
         yml.addDefault(MainConfigPath.PASSWORD_MAX_LENGTH, 16);
         yml.addDefault(MainConfigPath.DISPLAY_LOGIN_TIMEOUT_TIMER, true);
