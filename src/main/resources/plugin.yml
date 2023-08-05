@@ -1,0 +1,21 @@
+name: GatekeeperChicken
+version: '${project.version}'
+main: lsy291.gatekeeperchicken.GatekeeperChicken
+api-version: '1.20'
+commands:
+  reg:
+    description: Register for the current account
+    usage: /reg <Password> <Confirm Password>
+  register:
+    description: Register for the current account
+    usage: /register <Password> <Confirm Password>
+  l:
+    description: Log in to the current account
+    usage: /l <Password>
+  login:
+    description: Log in to the current account
+    usage: /login <Password>
+  changepwd:
+    description: Change the current account password
+    usage: /changepwd <Old Password> <New Password>
+
