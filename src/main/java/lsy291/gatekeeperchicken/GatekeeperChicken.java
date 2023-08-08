@@ -41,7 +41,7 @@ public final class GatekeeperChicken extends JavaPlugin {
         database.init();
 
         registerEvents(new PlayerJoinListener(), new PlayerQuitListener(), new PlayerLoggedListener(), new PlayerRegisteredListener(),
-                new PlayerLoginListener(), new PlayerRegisterListener(), new PlayerActionsListener());
+                new PlayerLoginListener(), new PlayerRegisterListener(), new PlayerActionsListener(), new PlayerChangePasswordListener());
 
         if (loginMethod.equals("both") || loginMethod.equals("cmd"))
         {

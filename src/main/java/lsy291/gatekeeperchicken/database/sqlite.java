@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.UUID;
 
 import static lsy291.gatekeeperchicken.GatekeeperChicken.plugin;
+import static lsy291.gatekeeperchicken.utils.EncryptionAPI.SHA1Encryption;
 
 public class sqlite {
     private String url;
@@ -128,6 +129,11 @@ public class sqlite {
         }
 
         return data;
+    }
+
+    public boolean isPasswordMatchingNow(UUID player, String password)
+    {
+        return  SHA1Encryption(password).equals(getPlayerData(player).get("pwd"));
     }
 
 }

@@ -23,6 +23,11 @@ public class SimplifiedChinese extends Language {
         yml.addDefault(Message.REGISTER_FAILED_PASSWORD_NOT_EQUAL, "§c注册失败,两次密码不相等");
         yml.addDefault(Message.REGISTER_FAILED_LENGTH_INVAILD, "§c注册失败,密码长度不合法,有效值为%passwordMinLength% - %passwordMaxLength%");
         yml.addDefault(Message.LOGIN_TIMEOUT_TIMER, "§f登录超时: §c%timeout%§f秒");
+        yml.addDefault(Message.CHANGE_PASSWORD_SUCESS, "§a密码更换成功,请牢记当前密码");
+        yml.addDefault(Message.CHANGE_PASSWORD_FAILED_EQUAL, "§c新旧密码不可以相同!");
+        yml.addDefault(Message.CHANGE_PASSWORD_FAILED_WORNG_ORIGINAL_PASSWORD, "§c原密码不正确!");
+        yml.addDefault(Message.CHANGE_PASSWORD_LENGTH_INVAILD, "§c更换密码失败,新密码长度不合法,有效值为%passwordMinLength% - %passwordMaxLength%");
+        yml.addDefault(Message.CHANGE_PASSWORD_FAILED_USAGE_ERROR, "§c用法有误,请使用 changepassword <旧密码> <新密码> (.或/均可)");
 
         yml.options().copyDefaults(true);
         save();

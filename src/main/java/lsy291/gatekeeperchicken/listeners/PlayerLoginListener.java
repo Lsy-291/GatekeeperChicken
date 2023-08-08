@@ -1,6 +1,6 @@
 package lsy291.gatekeeperchicken.listeners;
 
-import lsy291.gatekeeperchicken.handler.LoginRegistrationHandler;
+import lsy291.gatekeeperchicken.handler.MainHandler;
 import lsy291.gatekeeperchicken.utils.PlayerIdentityStatsAPI;
 import lsy291.gatekeeperchicken.language.Message;
 import org.bukkit.Sound;
@@ -22,13 +22,13 @@ public class PlayerLoginListener implements Listener {
 
         if (!PlayerIdentityStatsAPI.isPlayerLoggedIn(player.getUniqueId()) && (loginMethod.equals("both") || loginMethod.equals("text")))
         {
-            // Check if the message is in login format ".l/login xxxx xxxx"
+            // Check if the message is in login format ".l/login xxxx"
             if (message.startsWith(".l") || message.startsWith(".login")) {
                 String[] split = message.split(" ");
                 if (split.length == 2) {
                     String password = split[1];
 
-                    int loginState = LoginRegistrationHandler.allowThroughLogin(player, password);
+                    int loginState = MainHandler.allowLogin(player, password);
                     switch (loginState) {
                         case 1:
                             sendMsgToPlayer(player, language.getString(Message.LOGIN_FAILED_UNREGISTERED));

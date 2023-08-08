@@ -15,4 +15,9 @@ public class Message {
     public static final String REGISTER_FAILED_PASSWORD_NOT_EQUAL = "register-failed-password-not-equal";
     public static final String REGISTER_FAILED_LENGTH_INVAILD = "register-failed-length-invaild";
     public static final String LOGIN_TIMEOUT_TIMER = "login-timeout-timer";
+    public static final String CHANGE_PASSWORD_SUCESS = "change-password-sucess";
+    public static final String CHANGE_PASSWORD_FAILED_EQUAL = "change-password-failed-equal";
+    public static final String CHANGE_PASSWORD_FAILED_WORNG_ORIGINAL_PASSWORD = "change-password-failed-wrong-original-password";
+    public static final String CHANGE_PASSWORD_LENGTH_INVAILD = "change-password-length-invaild";
+    public static final String CHANGE_PASSWORD_FAILED_USAGE_ERROR = "change-password-failed-usage-error";
 }
