@@ -2,6 +2,8 @@ package lsy291.gatekeeperchicken.listeners;
 
 import lsy291.gatekeeperchicken.utils.PlayerIdentityStatsAPI;
 import lsy291.gatekeeperchicken.language.Message;
+import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,6 +23,13 @@ public class PlayerJoinListener implements Listener {
 
         if (PlayerIdentityStatsAPI.isPlayerLoggedIn(player.getUniqueId())) {
             sendMsgToPlayer(player, language.getString(Message.LOGIN_SUCESS_AUTO_LOGIN));
+
+            Player[] players = Bukkit.getOnlinePlayers().toArray(new Player[0]);
+            for (Player onlinePlayer : players) {
+                sendMsgToPlayer(onlinePlayer, language.getString(Message.LOGIN_SUCESS).replace("%player%", player.getDisplayName()));
+                onlinePlayer.playSound(player.getLocation(), Sound.valueOf(loginSucessSound), loginSoundVolume, 1);
+            }
+
             return;
         }
 
