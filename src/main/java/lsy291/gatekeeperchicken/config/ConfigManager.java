@@ -1,11 +1,13 @@
 package lsy291.gatekeeperchicken.config;
 
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
 
@@ -101,6 +103,6 @@ public class ConfigManager {
      * Get string at given path
      */
     public String getString(String path) {
-        return yml.getString(path);
+        return ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(yml.getString(path)));
     }
 }
