@@ -9,6 +9,7 @@ public class MainConfig extends ConfigManager {
 
         YamlConfiguration yml = getYml();
         yml.addDefault(MainConfigPath.LANGUAGE, "zh_cn");
+        yml.addDefault(MainConfigPath.PLUGIN_PREFIX_ENABLE, false);
         yml.addDefault(MainConfigPath.LOGIN_METHOD, "both");
         yml.addDefault(MainConfigPath.PASSWORD_ENCRYPTION, true);
         yml.addDefault(MainConfigPath.LOGIN_SUCESS_SOUND, "ENTITY_EXPERIENCE_ORB_PICKUP");

@@ -2,6 +2,7 @@ package lsy291.gatekeeperchicken.config;
 
 public class MainConfigPath {
     public static final String LANGUAGE = "language";
+    public static final String PLUGIN_PREFIX_ENABLE = "enable-plugin-prefix";
     public static final String LOGIN_METHOD = "login-method";
     public static final String PASSWORD_ENCRYPTION = "password-encryption";
     public static final String LOGIN_SUCESS_SOUND = "login-sucess-sound";

@@ -7,12 +7,13 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import static lsy291.gatekeeperchicken.GatekeeperChicken.plugin;
 import static lsy291.gatekeeperchicken.GatekeeperChicken.pluginPrefix;
+import static lsy291.gatekeeperchicken.config.ConfigItems.enablePluginPrefix;
 
 public class ActionBarAPI {
     public static void sendActionBar(Player player, String message) {
         if (player == null) return;
         if (!player.isOnline()) { return; }
-        player.spigot().sendMessage( ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(pluginPrefix + message));
+        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(enablePluginPrefix ? pluginPrefix : "" + message));
     }
 
     public static void sendActionBar(Player player, String message, int duration) {

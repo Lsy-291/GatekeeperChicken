@@ -4,6 +4,7 @@ import static lsy291.gatekeeperchicken.GatekeeperChicken.mainConfig;
 
 public class ConfigItems {
     public static String languageName = mainConfig.getString(MainConfigPath.LANGUAGE);
+    public static boolean enablePluginPrefix = mainConfig.getBoolean(MainConfigPath.PLUGIN_PREFIX_ENABLE);
     public static String loginMethod = mainConfig.getString(MainConfigPath.LOGIN_METHOD);
     public static boolean enablePassworldEncryption = mainConfig.getBoolean(MainConfigPath.PASSWORD_ENCRYPTION);
     public static String loginSucessSound = mainConfig.getString(MainConfigPath.LOGIN_SUCESS_SOUND);
